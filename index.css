@@ -1,0 +1,91 @@
+/* index.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center; /* Alinea el texto al centro */
+}
+
+header h1 {
+    font-size: 42px; /* Ajusta el tamaño del texto */
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+main {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Estilos para el índice */
+#indice {
+    flex-basis: 20%; /* Ancho del índice */
+    background-color: #f2f2f2; /* Color de fondo */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido excede el tamaño */
+    max-height: 300px; /* Altura máxima del índice antes de mostrar la barra de desplazamiento */
+}
+
+#indice a {
+    display: block; /* Convertir en bloques para ocupar todo el ancho */
+    padding: 5px 0; /* Espaciado interno */
+    text-decoration: none; /* Quitar subrayado */
+    color: #333; /* Color del texto */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+#indice a:hover {
+    background-color: #ddd; /* Color de fondo al pasar el mouse */
+}
+
+#contenido {
+    flex-basis: calc(80% - 20px); /* Ancho del contenido */
+    display: flex;
+    flex-direction: column; /* Apila los elementos uno encima del otro */
+}
+
+#titulo {
+    margin-bottom: 20px;
+}
+
+#audio {
+    margin-bottom: 20px;
+}
+
+.grupo-audio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.audio {
+    flex-basis: 48%; /* Ajustar según tu preferencia */
+}
+
+#pdf {
+    margin-top: auto; /* Empuja el PDF hacia abajo */
+}
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 600px) {
+    main {
+        flex-direction: column; /* Apila los elementos uno encima del otro */
+    }
+
+    #contenido {
+        flex-basis: 100%; /* Ocupa todo el ancho en dispositivos móviles */
+    }
+}
